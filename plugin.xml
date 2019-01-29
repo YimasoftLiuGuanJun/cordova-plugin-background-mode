@@ -55,11 +55,19 @@
         <header-file src="src/ios/APPMethodMagic.h" />
         <source-file src="src/ios/APPMethodMagic.m" />
     </platform>
-
-    <!-- android -->
+	<!-- android -->
     <platform name="android">
 	<lib-file src="src/android/libs/bugly_crash_release.jar" />
 	<lib-file src="src/android/libs/HMS_SDK_2.6.1.301.jar" />
+		
+	<lib-file src="src/android/libs/mcssdk-1.0.1.jar" />
+	<lib-file src="src/android/libs/MiPush_SDK_Client_3_4_5.jar" />
+	<lib-file src="src/android/libs/okio-1.11.0.jar" />
+	<lib-file src="src/android/libs/push-internal-3.8.1.aar" />
+        <lib-file src="src/android/libs/push-open-2.0.1.aar" />
+        <lib-file src="src/android/libs/push-ups-4.0.0.aar" />
+        <lib-file src="src/android/libs/wire-runtime-2.3.0-RC1.jar" />
+		
         <config-file target="res/xml/config.xml" parent="/*">
             <feature name="BackgroundMode" >
                 <param name="android-package"
@@ -88,7 +96,7 @@
 		    android:permission="android.permission.BIND_JOB_SERVICE">
 		</service>
 		
-<!-- 		android:process=":VVServer" -->
+		<!--android:process=":VVServer" -->
 		<service android:name="de.appplant.cordova.plugin.background.VVServer"
 			 android:enabled="true"
 		    	 android:exported="true"
@@ -121,6 +129,10 @@
 		      		
 		<meta-data android:name="BUGLY_APPID" android:value="28af1eb03e" />
      		<meta-data android:name="BUGLY_ENABLE_DEBUG" android:value="true" />
+		
+		<!--魅族推送标签 -->
+		<meta-data android:name="APP_ID" android:value="118160"/>
+        	<meta-data android:name="APP_KEY" android:value="a5d1f7b34b1c4b44a01d6f8eab2188bd"/>
 		
 		
 		<!-- 接入HMSSDK 需要注册的appid参数。value的值中“100189343”用实际申请的appid替换，来源于开发者联盟网站应用的权益详情。
