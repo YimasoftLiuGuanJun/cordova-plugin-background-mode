@@ -6,13 +6,13 @@ repositories{
 } 
 
 dependencies { 
-    implementation(name: 'push-internal-3.8.1', ext: 'aar')
-    implementation(name: 'push-open-2.0.1', ext: 'aar')
-    implementation(name: 'push-ups-4.0.0', ext: 'aar')
-    implementation files('libs/mcssdk-1.0.1.jar')
-    implementation files('libs/MiPush_SDK_Client_3_4_5.jar')
-    implementation files('libs/okio-1.11.0.jar')
-    implementation files('libs/wire-runtime-2.3.0-RC1.jar')
+    compile(name: 'push-internal-3.8.1', ext: 'aar')
+    compile(name: 'push-open-2.0.1', ext: 'aar')
+    compile(name: 'push-ups-4.0.0', ext: 'aar')
+    compile files('libs/mcssdk-1.0.1.jar')
+    compile files('libs/MiPush_SDK_Client_3_4_5.jar')
+    compile files('libs/okio-1.11.0.jar')
+    compile files('libs/wire-runtime-2.3.0-RC1.jar')
 } 
 
 android { 
