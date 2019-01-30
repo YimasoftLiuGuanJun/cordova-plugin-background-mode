@@ -133,8 +133,8 @@
      		<meta-data android:name="BUGLY_ENABLE_DEBUG" android:value="true" />
 		
 		<!--魅族推送标签 -->
-		<meta-data android:name="APP_ID" android:value="118498"/>
-        	<meta-data android:name="APP_KEY" android:value="37b544330bc7456da0806dd6ef2bbc30"/>
+<!-- 		<meta-data android:name="APP_ID" android:value="118498"/>
+        	<meta-data android:name="APP_KEY" android:value="37b544330bc7456da0806dd6ef2bbc30"/> -->
 		
 		<!-- 魅族统一推送配置 -->
 		<!-- the following 4 ${PACKAGE_NAME} should be changed to your actual package name
