@@ -57,6 +57,7 @@
     </platform>
 	<!-- android -->
     <platform name="android">
+	<preference name="android-manifest/@xmlns:tools" value="http://schemas.android.com/tools" />
 	<lib-file src="src/android/libs/bugly_crash_release.jar" />
 	<lib-file src="src/android/libs/HMS_SDK_2.6.1.301.jar" />
 		
@@ -279,7 +280,7 @@
 <!--       		<uses-permission android:name="android.permission.READ_PHONE_STATE"></uses-permission> -->
 
         <config-file target="AndroidManifest.xml" parent="/manifest">
-		<manifest xmlns:tools="http://schemas.android.com/tools" />
+<!-- 		<manifest xmlns:tools="http://schemas.android.com/tools" /> -->
             	<uses-permission android:name="android.permission.WAKE_LOCK" />
             	<!--开机启动权限-->
             	<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
