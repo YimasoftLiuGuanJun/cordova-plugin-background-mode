@@ -81,6 +81,35 @@
             <preference name="KeepRunning" value="true" />
         </config-file>
 
+	<config-file target="AndroidManifest.xml" parent="/manifest">
+		<manifest xmlns:tools="http://schemas.android.com/tools" />
+            	<uses-permission android:name="android.permission.WAKE_LOCK" />
+            	<!--开机启动权限-->
+            	<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+		<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />  
+		<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"></uses-permission>
+     		<uses-permission android:name="android.permission.ACCESS_WIFI_STATE"></uses-permission>
+      		<uses-permission android:name="android.permission.INTERNET"></uses-permission>
+      		<uses-permission android:name="android.permission.READ_LOGS"></uses-permission>
+		<uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS"/>
+		
+		<!--HMS-SDK引导升级HMS功能，访问OTA服务器需要网络权限 | HMS-SDK upgrade HMS Feature, access to OTA server requires network privileges-->
+<!-- 		<uses-permission android:name="android.permission.INTERNET" /> -->
+		
+		<!--HMS-SDK引导升级HMS功能，保存下载的升级包需要SD卡写权限 | HMS-SDK upgrade HMS Feature, save downloaded upgrade pack requires SD card Write permission-->
+<!-- 		<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> -->
+		
+		<!--检测网络状态 | Detecting Network status-->
+<!-- 		<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/> -->
+		
+		<!--检测wifi状态 | Detecting WiFi status-->
+<!-- 		<uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/> -->
+		
+		<!--获取用户手机的IMEI，用来唯一的标识设备。 | Gets the IMEI of the user's phone, used to uniquely identify the device.-->
+		<uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+		    
+        </config-file>
+	    
         <config-file target="AndroidManifest.xml" parent="/manifest/application">
             	<service android:name="de.appplant.cordova.plugin.background.ForegroundService" />
                 <!--一个像素的activity -->
@@ -169,10 +198,10 @@
 		    格式 android:value="appid=xxxxxx"
 		    Access HMSSDK need to register AppID parameters. Value "100189343" is replaced with the actual application APPID, derived from the Developer affiliate website application.
 		    Format android:value= "appid=xxxxxx"-->
-<!-- 		<meta-data
+		<meta-data
 		    tools:replace="android:value"
 		    android:name="com.huawei.hms.client.appid"
-		    android:value="appid=100189343"/> -->
+		    android:value="appid=100189343"/>
 
 
 		<!-- 接入HMSSDK 需要注册的provider，authorities 一定不能与其他应用一样，所以这边 com.limainfo.vv 要替换上您应用的包名
@@ -276,37 +305,8 @@
                 
         </config-file>
 	    
-<!--       		<uses-permission android:name="android.permission.READ_PHONE_STATE"></uses-permission> -->
 
-        <config-file target="AndroidManifest.xml" parent="/manifest">
-		<manifest xmlns:tools="http://schemas.android.com/tools" />
-            	<uses-permission android:name="android.permission.WAKE_LOCK" />
-            	<!--开机启动权限-->
-            	<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
-		<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />  
-		<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"></uses-permission>
-     		<uses-permission android:name="android.permission.ACCESS_WIFI_STATE"></uses-permission>
-      		<uses-permission android:name="android.permission.INTERNET"></uses-permission>
-      		<uses-permission android:name="android.permission.READ_LOGS"></uses-permission>
-		<uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS"/>
-		
-		<!--HMS-SDK引导升级HMS功能，访问OTA服务器需要网络权限 | HMS-SDK upgrade HMS Feature, access to OTA server requires network privileges-->
-<!-- 		<uses-permission android:name="android.permission.INTERNET" /> -->
-		
-		<!--HMS-SDK引导升级HMS功能，保存下载的升级包需要SD卡写权限 | HMS-SDK upgrade HMS Feature, save downloaded upgrade pack requires SD card Write permission-->
-<!-- 		<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> -->
-		
-		<!--检测网络状态 | Detecting Network status-->
-<!-- 		<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/> -->
-		
-		<!--检测wifi状态 | Detecting WiFi status-->
-<!-- 		<uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/> -->
-		
-		<!--获取用户手机的IMEI，用来唯一的标识设备。 | Gets the IMEI of the user's phone, used to uniquely identify the device.-->
-		<uses-permission android:name="android.permission.READ_PHONE_STATE"/>
-		    
-		
-        </config-file>
+
 	    
         <source-file
             src="src/android/BackgroundMode.java"
