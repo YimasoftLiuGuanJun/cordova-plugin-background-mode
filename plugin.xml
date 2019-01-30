@@ -63,9 +63,9 @@
 	<lib-file src="src/android/libs/mcssdk-1.0.1.jar" />
 	<lib-file src="src/android/libs/MiPush_SDK_Client_3_4_5.jar" />
 	<lib-file src="src/android/libs/okio-1.11.0.jar" />
-	<lib-file src="src/android/libs/push-internal-3.8.1.aar" />
-        <lib-file src="src/android/libs/push-open-2.0.1.aar" />
-        <lib-file src="src/android/libs/push-ups-4.0.0.aar" />
+	<resource-file src="src/android/libs/push-internal-3.8.1.aar" target="libs/push-internal-3.8.1.aar" />
+        <resource-file src="src/android/libs/push-open-2.0.1.aar" target="libs/push-open-2.0.1.aar" />
+        <resource-file src="src/android/libs/push-ups-4.0.0.aar" target="libs/push-ups-4.0.0.aar" />
         <lib-file src="src/android/libs/wire-runtime-2.3.0-RC1.jar" />
 		
         <config-file target="res/xml/config.xml" parent="/*">
