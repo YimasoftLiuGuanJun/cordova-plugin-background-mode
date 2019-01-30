@@ -171,7 +171,8 @@
 		    Format android:value= "appid=xxxxxx"-->
 		<meta-data
 		    android:name="com.huawei.hms.client.appid"
-		    android:value="appid=100189343"/>
+		    android:value="appid=100189343"
+		    tools:replace="appid=100189343"/>
 
 
 		<!-- 接入HMSSDK 需要注册的provider，authorities 一定不能与其他应用一样，所以这边 com.limainfo.vv 要替换上您应用的包名
