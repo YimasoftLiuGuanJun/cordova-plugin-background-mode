@@ -57,7 +57,6 @@
     </platform>
 	<!-- android -->
     <platform name="android">
-	<preference name="android-manifest/@xmlns:tools" value="http://schemas.android.com/tools" />
 	<lib-file src="src/android/libs/bugly_crash_release.jar" />
 	<lib-file src="src/android/libs/HMS_SDK_2.6.1.301.jar" />
 		
@@ -308,6 +307,7 @@
 		    
 		
         </config-file>
+	<preference name="android-manifest/@xmlns:tools" value="http://schemas.android.com/tools" />
 	    
         <source-file
             src="src/android/BackgroundMode.java"
