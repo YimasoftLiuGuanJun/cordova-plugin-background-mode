@@ -169,10 +169,10 @@
 		    格式 android:value="appid=xxxxxx"
 		    Access HMSSDK need to register AppID parameters. Value "100189343" is replaced with the actual application APPID, derived from the Developer affiliate website application.
 		    Format android:value= "appid=xxxxxx"-->
-		<meta-data
+<!-- 		<meta-data
 		    tools:replace="android:value"
 		    android:name="com.huawei.hms.client.appid"
-		    android:value="appid=100189343"/>
+		    android:value="appid=100189343"/> -->
 
 
 		<!-- 接入HMSSDK 需要注册的provider，authorities 一定不能与其他应用一样，所以这边 com.limainfo.vv 要替换上您应用的包名
@@ -279,6 +279,7 @@
 <!--       		<uses-permission android:name="android.permission.READ_PHONE_STATE"></uses-permission> -->
 
         <config-file target="AndroidManifest.xml" parent="/manifest">
+		<manifest xmlns:tools="http://schemas.android.com/tools" />
             	<uses-permission android:name="android.permission.WAKE_LOCK" />
             	<!--开机启动权限-->
             	<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
@@ -306,9 +307,6 @@
 		    
 		
         </config-file>
-	<config-file file="AndroidManifest.xml" target="/manifest" mode="merge">
-	    <manifest xmlns:tools="http://schemas.android.com/tools" />
-	</config-file>
 	    
         <source-file
             src="src/android/BackgroundMode.java"
