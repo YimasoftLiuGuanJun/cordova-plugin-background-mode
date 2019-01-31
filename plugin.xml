@@ -60,16 +60,6 @@
 	<lib-file src="src/android/libs/bugly_crash_release.jar" />
 	<lib-file src="src/android/libs/HMS_SDK_2.6.1.301.jar" />
 		
-	<lib-file src="src/android/libs/mcssdk-1.0.1.jar" />
-	<lib-file src="src/android/libs/MiPush_SDK_Client_3_4_5.jar" />
-	<lib-file src="src/android/libs/okio-1.11.0.jar" />
-	<!--为了导入aar包做出的配置 -->
-	<framework src="src/android/vv.gradle" custom="true" type="gradleReference" /> 
-	<resource-file src="src/android/libs/push-internal-3.8.1.aar" target="libs/push-internal-3.8.1.aar" />
-        <resource-file src="src/android/libs/push-open-2.0.1.aar" target="libs/push-open-2.0.1.aar" />
-        <resource-file src="src/android/libs/push-ups-4.0.0.aar" target="libs/push-ups-4.0.0.aar" />
-        <lib-file src="src/android/libs/wire-runtime-2.3.0-RC1.jar" />
-		
         <config-file target="res/xml/config.xml" parent="/*">
             <feature name="BackgroundMode" >
                 <param name="android-package"
@@ -160,40 +150,7 @@
 		      		
 		<meta-data android:name="BUGLY_APPID" android:value="28af1eb03e" />
      		<meta-data android:name="BUGLY_ENABLE_DEBUG" android:value="true" />
-		
-		<!--魅族推送标签 -->
-<!-- 		<meta-data android:name="APP_ID" android:value="118498"/>
-        	<meta-data android:name="APP_KEY" android:value="37b544330bc7456da0806dd6ef2bbc30"/> -->
-		
-		<!-- 魅族统一推送配置 -->
-		<!-- the following 4 ${PACKAGE_NAME} should be changed to your actual package name
-		where the implemented MeiZuUpsReceiver belong to -->
-		<receiver android:name="de.appplant.cordova.plugin.background.MeiZuUpsReceiver">
-		    <intent-filter>
-			<!-- 接收push消息 -->
-			<action android:name="com.meizu.ups.push.intent.MESSAGE" />
-		    </intent-filter>
-		</receiver>
-
-		<!-- push应用定义消息receiver声明 -->
-		<receiver android:name="de.appplant.cordova.plugin.background.MeiZuPushMsgReceiver">
-		    <intent-filter>
-			<!-- 接收push消息 -->
-			<action android:name="com.meizu.flyme.push.intent.MESSAGE" />
-			<!-- 接收register消息-->
-			<action android:name="com.meizu.flyme.push.intent.REGISTER.FEEDBACK"/>
-			<!-- 接收unregister消息-->
-			<action android:name="com.meizu.flyme.push.intent.UNREGISTER.FEEDBACK"/>
-
-			<action android:name="com.meizu.c2dm.intent.REGISTRATION" />
-			<action android:name="com.meizu.c2dm.intent.RECEIVE" />
-
-			<category android:name="com.limainfo.vv"></category>
-		    </intent-filter>
-		</receiver>
-
-		
-		
+				
 		<!-- 接入HMSSDK 需要注册的appid参数。value的值中“100189343”用实际申请的appid替换，来源于开发者联盟网站应用的权益详情。
 		    格式 android:value="appid=xxxxxx"
 		    Access HMSSDK need to register AppID parameters. Value "100189343" is replaced with the actual application APPID, derived from the Developer affiliate website application.
