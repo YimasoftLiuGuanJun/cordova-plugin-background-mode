@@ -67,10 +67,6 @@ import com.huawei.android.hms.agent.push.handler.EnableReceiveNotifyMsgHandler;
 import com.huawei.android.hms.agent.push.handler.GetPushStateHandler;
 import com.huawei.android.hms.agent.push.handler.GetTokenHandler;
 
-//魅族推送导包
-import com.meizu.cloud.pushsdk.PushManager;
-import com.meizu.upspushsdklib.UpsPushManager;
-
 public class BackgroundMode extends CordovaPlugin {
 
     // Event types for callbacks
