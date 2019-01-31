@@ -117,12 +117,6 @@ public class BackgroundMode extends CordovaPlugin {
     private int tempNotificationId = 2;//发送的通知的Id
     private static boolean isOpenDebugModel = false;
     
-    //魅族集成推送的id和key和魅族渠道的id和key
-    public static String UPS_APP_ID = "1003969";
-    public static String UPS_APP_KEY = "1edbeb121b8f49d5b0ab3b051e0eb3ec";
-    public static String APP_ID = "118498";
-    public static String APP_KEY = "37b544330bc7456da0806dd6ef2bbc30";
-  
     @Override
     public void initialize(CordovaInterface cordova, CordovaWebView webView) {
         super.initialize(cordova, webView);
@@ -145,9 +139,6 @@ public class BackgroundMode extends CordovaPlugin {
             getPushStatus();
             setReceiveNormalMsg(true);
             setReceiveNotifyMsg(true);
-        }else if(Build.MANUFACTURER.equals("Meizu")){
-            UpsPushManager.register(this,UPS_APP_ID,UPS_APP_KEY);
-            PushManager.register(this, APP_ID, APP_KEY);
         }
 
         if(isOpenDebugModel)
